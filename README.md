@@ -1,80 +1,399 @@
-# HomeValuator: AI-Powered House Price Prediction Platform
+<div align="center">
 
-HomeValuator is a production-grade, responsive PropTech web application designed to estimate residential property valuations in Ames, Iowa using Explainable Machine Learning (XAI). The application features dynamic financial simulators, multi-model algorithms, interactive waterfall charts, batch CSV prediction returns, history logs, analytics dashboards, and administrative retraining services.
+# 🏡 HomeValuator
+### AI-Powered House Price Prediction Platform
 
----
+<img src="https://img.shields.io/badge/Machine%20Learning-Scikit--Learn-orange?style=for-the-badge" />
+<img src="https://img.shields.io/badge/Frontend-React%20%7C%20TypeScript-blue?style=for-the-badge" />
+<img src="https://img.shields.io/badge/Backend-FastAPI-green?style=for-the-badge" />
+<img src="https://img.shields.io/badge/Explainable%20AI-SHAP-red?style=for-the-badge" />
+<img src="https://img.shields.io/badge/License-MIT-purple?style=for-the-badge" />
 
-## 🚀 Key Features
+**🚀 A Production-Ready PropTech Platform for Intelligent Residential Property Valuation**
 
-*   **Multi-Step Valuation Form:** Interactive slider and pill selection covering area, interior specs, and building qualities, with an **Advanced Specifications Accordion** for optional overrides (plot frontage, masonry veneer area, deck size, pool size).
-*   **AI Valuation Waterfall Chart:** A horizontal waterfall chart that stacks game-theory contributions (**SHAP values**) above or below the Ames baseline market price (~$181k) to explain prediction drivers in real time.
-*   **Live Valuation Sandbox:** Quick-sliders on the results page to dynamically adjust living area, garage spaces, or quality, re-triggering estimation requests instantly.
-*   **Interactive Financial Calculators:**
-    *   **Mortgage EMI Calculator:** Sliders for down payment percentages, interest rates, and loan terms (15 vs 30 yrs fixed).
-    *   **Rental Yield Simulator:** Sliders for customized monthly rents and operating costs (property tax, maintenance) computing net monthly cashflow and Cap Rate.
-*   **Property Comparison:** Side-by-side comparison matrix of up to 3 saved properties.
-*   **Batch CSV Valuations:** Drop-zone that accepts a property CSV file and instantly processes and downloads prediction-enriched CSV datasets.
-*   **Valuation History & PDF Reports:** User prediction logs with full text search and detailed PDF valuation report generation (utilizing `fpdf2`).
-*   **Analytics Dashboard:** Visual aggregations of pricing distributions, quality-price trends, top neighborhoods, and model feature importances.
-*   **Administrative Model Re-training:** Admin dropper to upload new transaction CSVs and trigger background re-fitting and cross-validation logs.
+Predict residential property prices using Machine Learning, Explainable AI (SHAP), Interactive Financial Analytics, and Modern Web Technologies.
+
+</div>
 
 ---
 
-## 🛠️ Technology Stack
+# 📖 Overview
 
-*   **Backend:** Python 3.13, FastAPI (ASGI Web Services), SQLAlchemy ORM, Uvicorn, Pandas, Scikit-Learn 1.6.1, SHAP (Explainable AI), fpdf2 (PDF Generation).
-*   **Database:** SQLite (local development zero-config db) / support for PostgreSQL connection strings.
-*   **Frontend:** React, Vite (Asset Bundler), TypeScript, Tailwind CSS v4, Recharts, Framer Motion, Lucide Icons.
+**HomeValuator** is a full-stack AI-powered property valuation platform that estimates residential house prices using the **Ames Housing Dataset** and advanced Machine Learning algorithms.
 
----
-
-## 📂 Project Architecture
-
-*   **[backend/](file:///d:/Git-Hub%20projects/House%20price%20pridiction/backend)** - Core python services.
-    *   **[database.py](file:///d:/Git-Hub%20projects/House%20price%20pridiction/backend/database.py)**: Engine configurations and database session initializers.
-    *   **[models.py](file:///d:/Git-Hub%20projects/House%20price%20pridiction/backend/models.py)**: SQLAlchemy models for users and predictions.
-    *   **[schemas.py](file:///d:/Git-Hub%20projects/House%20price%20pridiction/backend/schemas.py)**: Pydantic schemas validating input structures and API responses.
-    *   **[auth_utils.py](file:///d:/Git-Hub%20projects/House%20price%20pridiction/backend/auth_utils.py)**: Cryptographic password hashing (PBKDF2) and JWT token operations.
-    *   **[ml_engine.py](file:///d:/Git-Hub%20projects/House%20price%20pridiction/backend/ml_engine.py)**: Scikit-learn estimator ingestion, SHAP TreeExplainer mappings, and investment calculations.
-    *   **[pdf_generator.py](file:///d:/Git-Hub%20projects/House%20price%20pridiction/backend/pdf_generator.py)**: PDF valuation report compiler.
-    *   **[main.py](file:///d:/Git-Hub%20projects/House%20price%20pridiction/backend/main.py)**: FastAPI endpoints, CORS bindings, and routes definitions.
-    *   **[test_api.py](file:///d:/Git-Hub%20projects/House%20price%20pridiction/backend/test_api.py)**: Automated API integration test suite.
-*   **[frontend/](file:///d:/Git-Hub%20projects/House%20price%20pridiction/frontend)** - React/Vite single-page application.
-    *   **[src/api.ts](file:///d:/Git-Hub%20projects/House%20price%20pridiction/frontend/src/api.ts)**: Typing interfaces and client request functions mapping FastAPI endpoints.
-    *   **[src/App.tsx](file:///d:/Git-Hub%20projects/House%20price%20pridiction/frontend/src/App.tsx)**: Main dashboard components and layouts.
-    *   **[src/index.css](file:///d:/Git-Hub%20projects/House%20price%20pridiction/frontend/src/index.css)**: Tailwind v4 import guidelines, typography, scrollbars, and card styling.
+Designed as a real-world **PropTech** application, it combines predictive analytics, explainable AI, financial calculators, interactive dashboards, and administrative model management into one modern web platform.
 
 ---
 
-## 💻 Installation & Setup
+# ✨ Features
 
-### 1. Run the Backend Server
-1. Navigate to the root directory and activate the python virtual environment:
-   ```powershell
-   .venv\Scripts\activate
-   ```
-2. Start the FastAPI uvicorn server on port `8000`:
-   ```powershell
-   uvicorn backend.main:app --reload --port 8000
-   ```
-   *(API documentation is hosted at `http://127.0.0.1:8000/docs`)*
+## 🤖 AI House Price Prediction
 
-### 2. Run the Frontend Server
-1. Open a new terminal and navigate to the `frontend/` folder:
-   ```powershell
-   cd frontend
-   ```
-2. Start the Vite dev server:
-   ```powershell
-   npm run dev
-   ```
-3. Open `http://localhost:5173` in your web browser.
+- 🏠 Instant property valuation
+- 📊 Random Forest Regression Model
+- 📈 High prediction accuracy
+- ⚡ Real-time predictions
+- 🎯 Confidence Score
 
 ---
 
-## 🧪 Running Integration Tests
+## 🧠 Explainable AI (XAI)
 
-To run the automated integration tests and check all backend endpoints, activate the python environment and run:
-```powershell
-.venv\Scripts\python.exe backend/test_api.py
+Understand **why** a property received its predicted price.
+
+✔ SHAP Waterfall Chart
+
+✔ Feature Contributions
+
+✔ Top Influencing Features
+
+✔ Global Feature Importance
+
+---
+
+## 📊 Analytics Dashboard
+
+Interactive dashboards including:
+
+- 📈 House Price Distribution
+- 🏘 Neighborhood Analysis
+- 📉 Feature Importance
+- 📊 Price vs Quality
+- 📍 Market Trends
+- 🏡 Property Statistics
+
+---
+
+## 💰 Financial Tools
+
+### 🏦 Mortgage EMI Calculator
+
+Calculate
+
+- Loan Amount
+- Interest
+- EMI
+- Total Payment
+
+---
+
+### 💵 Rental Yield Calculator
+
+Calculate
+
+- Rental Income
+- Operating Cost
+- Cash Flow
+- Cap Rate
+- ROI
+
+---
+
+## ⚖ Property Comparison
+
+Compare up to **3 different properties**
+
+- Predicted Price
+- Living Area
+- Garage
+- Quality
+- ROI
+- Investment Score
+
+---
+
+## 📂 Batch CSV Prediction
+
+Upload hundreds of properties.
+
+✔ Upload CSV
+
+✔ Predict Prices
+
+✔ Download Results
+
+---
+
+## 📜 Prediction Reports
+
+Generate downloadable
+
+- PDF Report
+- Property Summary
+- AI Explanation
+- Financial Insights
+
+---
+
+## 📚 Prediction History
+
+- Search
+- Filter
+- Export
+- Delete
+- View Details
+
+---
+
+## 🔐 Authentication
+
+- Login
+- Register
+- JWT Authentication
+- Password Encryption
+- Protected Routes
+
+---
+
+## 👨‍💼 Admin Dashboard
+
+Admin Features
+
+- Upload New Dataset
+- Retrain Model
+- Cross Validation
+- View Logs
+- Dataset Statistics
+
+---
+
+# 🖥 Screenshots
+
+| Home | Prediction |
+|------|------------|
+| Add Screenshot | Add Screenshot |
+
+| Dashboard | SHAP Explanation |
+|------------|------------------|
+| Add Screenshot | Add Screenshot |
+
+---
+
+# 🚀 Technology Stack
+
+## Frontend
+
+- ⚛ React
+- TypeScript
+- Tailwind CSS
+- Vite
+- Framer Motion
+- Recharts
+- Lucide Icons
+
+---
+
+## Backend
+
+- FastAPI
+- Python
+- Scikit-Learn
+- Pandas
+- NumPy
+- SHAP
+- SQLAlchemy
+- fpdf2
+
+---
+
+## Database
+
+- SQLite
+- PostgreSQL
+
+---
+
+## Machine Learning
+
+- Linear Regression
+- Decision Tree
+- Random Forest
+- Gradient Boosting
+
+---
+
+## Deployment
+
+- ▲ Vercel
+- 🚄 Render
+- PostgreSQL
+
+---
+
+# 📂 Project Structure
+
+```text
+HomeValuator
+│
+├── backend
+│   ├── main.py
+│   ├── ml_engine.py
+│   ├── database.py
+│   ├── auth_utils.py
+│   ├── models.py
+│   ├── schemas.py
+│   ├── pdf_generator.py
+│   └── test_api.py
+│
+├── frontend
+│   ├── src
+│   ├── public
+│   ├── components
+│   ├── pages
+│   ├── assets
+│   └── api.ts
+│
+├── model
+├── dataset
+├── README.md
+└── requirements.txt
 ```
+
+---
+
+# ⚙ Installation
+
+## Clone Repository
+
+```bash
+git clone https://github.com/yourusername/HomeValuator.git
+```
+
+```bash
+cd HomeValuator
+```
+
+---
+
+## Backend
+
+```bash
+python -m venv .venv
+```
+
+Activate
+
+```bash
+.venv\Scripts\activate
+```
+
+Install
+
+```bash
+pip install -r requirements.txt
+```
+
+Run
+
+```bash
+uvicorn backend.main:app --reload
+```
+
+---
+
+## Frontend
+
+```bash
+cd frontend
+```
+
+```bash
+npm install
+```
+
+```bash
+npm run dev
+```
+
+---
+
+# 📡 API Endpoints
+
+| Method | Endpoint | Description |
+|----------|----------|-------------|
+| POST | /predict | Predict House Price |
+| POST | /batch-predict | Batch Prediction |
+| GET | /history | Prediction History |
+| GET | /analytics | Dashboard Analytics |
+| POST | /login | User Login |
+| POST | /register | User Registration |
+
+---
+
+# 📈 Machine Learning Pipeline
+
+```text
+Property Details
+        │
+        ▼
+Data Validation
+        │
+        ▼
+Feature Engineering
+        │
+        ▼
+Random Forest Model
+        │
+        ▼
+SHAP Explainability
+        │
+        ▼
+Prediction Result
+        │
+        ▼
+Financial Analysis
+        │
+        ▼
+PDF Report
+```
+
+---
+
+# 🎯 Future Roadmap
+
+- 📱 Mobile App
+- 🌍 Multi-language Support
+- 🗺 Interactive Maps
+- 🏦 Mortgage Approval AI
+- 🤖 AI Property Assistant
+- 📈 Market Trend Forecasting
+- 🛰 Satellite Property Insights
+
+---
+
+# ⭐ Highlights
+
+- ✅ Production Ready
+- ✅ Explainable AI
+- ✅ Interactive Dashboard
+- ✅ Financial Simulators
+- ✅ PDF Reports
+- ✅ Batch Predictions
+- ✅ Modern UI/UX
+- ✅ FastAPI Backend
+- ✅ React Frontend
+- ✅ Responsive Design
+
+---
+
+# 👨‍💻 Developer
+
+**Mohammad Shoheb**
+
+💼 Computer Science Engineer
+
+🌐 AI • Machine Learning • Full Stack Development • Data Science
+
+GitHub: https://github.com/yourusername
+
+LinkedIn: https://linkedin.com/in/yourprofile
+
+---
+
+<div align="center">
+
+### ⭐ Star this repository if you found it helpful!
+
+**Built with ❤️ using React, FastAPI, Scikit-Learn & Explainable AI**
+
+</div>
