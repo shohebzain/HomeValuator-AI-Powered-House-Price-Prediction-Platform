@@ -384,9 +384,9 @@ PDF Report
 
 🌐 AI • Machine Learning • Full Stack Development • Data Science
 
-GitHub: https://github.com/yourusername
+GitHub: https://github.com/shohebzain
 
-LinkedIn: https://linkedin.com/in/yourprofile
+LinkedIn: https://www.linkedin.com/in/mohammad-shoheb745
 
 ---
 
